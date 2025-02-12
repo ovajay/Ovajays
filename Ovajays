@@ -41,3 +41,59 @@
     <script src="script.js"></script>
 </body>
 </html>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label, input, select {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+.hidden {
+    display: none;
+    color: green;
+    font-weight: bold;
+}
+document.getElementById("booking-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    document.getElementById("confirmation-message").classList.remove("hidden");
+
+    setTimeout(() => {
+        document.getElementById("confirmation-message").classList.add("hidden");
+    }, 5000);
+});
